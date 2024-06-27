@@ -16,4 +16,5 @@ cmake --build "$BUILD_DIR" -- -j$(nproc)
 
 # Run the tests
 cd "$BUILD_DIR" || exit 1
-ctest --output-on-failure
+#ctest --output-on-failure
+./tests/run_tests -s
