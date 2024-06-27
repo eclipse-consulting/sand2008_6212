@@ -14,12 +14,12 @@ add_library(Catch2 INTERFACE)
 target_include_directories(Catch2 INTERFACE ${catch2_SOURCE_DIR}/single_include)
 
 # Add the test executable
-add_executable(YourProjectTests ${TEST_SRC_FILES})
-target_link_libraries(YourProjectTests PRIVATE Catch2)
-target_include_directories(YourProjectTests PRIVATE ../include)
+add_executable(run_tests ${TEST_SRC_FILES})
+target_link_libraries(run_tests PRIVATE Catch2)
+target_include_directories(run_tests PRIVATE ../include)
 
 # Add CTest support
 include(CTest)
-add_test(NAME YourProjectTests COMMAND YourProjectTests)
+add_test(NAME run_tests COMMAND run_tests)
 
 
