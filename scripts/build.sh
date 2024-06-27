@@ -13,3 +13,7 @@ fi
 # Run the CMake configuration and build process using Ninja and all available cores
 cmake -B "$BUILD_DIR" -G Ninja
 cmake --build "$BUILD_DIR" -- -j$(nproc)
+
+# Run the tests
+cd "$BUILD_DIR" || exit 1
+ctest --output-on-failure

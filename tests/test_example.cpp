@@ -1,7 +1,7 @@
 #include <catch2/catch.hpp>
-//#include "example.h"
+#include "sand2008/sand2008.h"
 
 TEST_CASE("Example test", "[example]") {
-    REQUIRE(1+1 == 2);
+    REQUIRE(compute_m1() == 42);
 }
 
