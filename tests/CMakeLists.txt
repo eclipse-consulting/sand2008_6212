@@ -17,7 +17,7 @@ file(GLOB_RECURSE TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/tests/*.cpp)
 add_executable(${TEST_EXECUTABLE_NAME} ${TEST_SRC_FILES})
 
 # Link Catch2 and include directories
-target_link_libraries(${TEST_EXECUTABLE_NAME} PRIVATE Catch2::Catch2)
+target_link_libraries(${TEST_EXECUTABLE_NAME} PRIVATE Catch2::Catch2 ${LIBRARY_NAME})
 target_include_directories(${TEST_EXECUTABLE_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 # Add CTest support
